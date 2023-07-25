@@ -83,7 +83,7 @@ def checkwest(x,y):
          visible = True    
     return visible
 
-file_input = open("C:\\Users\E1416669\Desktop\Advent of code\Adventinput8.txt")
+file_input = open("Advent of code\Adventinput8.txt")
 for line in file_input:
     array.append(line)
    # print(line)
