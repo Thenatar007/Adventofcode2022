@@ -9,7 +9,7 @@ def tailcheck(head, tail):
     tailnearhead = 0
     if ((tail[0] == head[0] and tail[1]==head[1]) or (tail[0] == head[0] and tail[1]==(head[1]+1)) or (tail[0] == head[0] and tail[1]==(head[1]-1))):
         tailnearhead = 1
-    if ((tail[0] == head[0]+1 and tail[1]==head[1]) or (tail[0]+1 == head[0] and tail[1]==(head[1]+1)) or (tail[0] == head[0]+1 and tail[1]==(head[1]-1))):
+    if ((tail[0] == head[0]+1 and tail[1]==head[1]) or (tail[0] == head[0]+1 and tail[1]==(head[1]+1)) or (tail[0] == head[0]+1 and tail[1]==(head[1]-1))):
         tailnearhead = 1
     if ((tail[0] == head[0]-1 and tail[1]==head[1]) or (tail[0] == head[0]-1 and tail[1]==(head[1]+1)) or (tail[0] == head[0]-1 and tail[1]==(head[1]-1))):
         tailnearhead = 1
@@ -43,7 +43,7 @@ for move in array:
             if tailcheck(head, tail) == 0:
                 tail[0] = head[0]
                 tail[1] = head[1]
-                tail[0] -=1
+                tail[0] +=1
                 update(tail)
             distance -= 1
     elif (direction == 'U'):
