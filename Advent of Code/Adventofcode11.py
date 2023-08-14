@@ -23,6 +23,7 @@ monkey4 = [62, 67, 80]
 monkey5 = [91]
 monkey6 = [79, 83, 64, 52, 77, 56, 63, 92]
 monkey7 = [50, 97, 76, 96, 80, 56]
+product = 3 * 11 * 7* 19* 5* 17 * 13
 def monkey0function():
     global zerocount
     while len(monkey0) > 0:
@@ -30,7 +31,7 @@ def monkey0function():
         item = monkey0.pop(0)
         item = item * 7
        
-        if item % 3 == 0:
+        if item % product == 0:
             monkey3.append(item)
         else:
             monkey7.append(item)
@@ -42,7 +43,7 @@ def monkey1function():
         item = monkey1.pop(0)
         item = item + 5
         
-        if item % 11 == 0:
+        if item % product == 0:
             monkey6.append(item)
         else:
             monkey4.append(item)
@@ -54,7 +55,7 @@ def monkey2function():
         item = monkey2.pop(0)
         item = item * item
         
-        if item % 7 == 0:
+        if item % product == 0:
             monkey0.append(item)
         else:
             monkey7.append(item)
@@ -66,7 +67,7 @@ def monkey3function():
         item = monkey3.pop(0)
         item = item + 4
         
-        if item % 2 == 0:
+        if item % product == 0:
             monkey5.append(item)
         else:
             monkey1.append(item)
@@ -79,7 +80,7 @@ def monkey4function():
         item = monkey4.pop(0)
         item = item * 17
         
-        if item % 19 == 0:
+        if item % product == 0:
             monkey2.append(item)
         else:
             monkey6.append(item)
@@ -91,7 +92,7 @@ def monkey5function():
         item = monkey5.pop(0)
         item = item + 7
         
-        if item % 5 == 0:
+        if item % product == 0:
             monkey1.append(item)
         else:
             monkey4.append(item)
@@ -103,7 +104,7 @@ def monkey6function():
         item = monkey6.pop(0)
         item = item + 6
         
-        if item % 17 == 0:
+        if item % product == 0:
             monkey2.append(item)
         else:
             monkey0.append(item)
@@ -115,7 +116,7 @@ def monkey7function():
         item = monkey7.pop(0)
         item = item + 3
         
-        if item % 13 == 0:
+        if item % product == 0:
             monkey3.append(item)
         else:
             monkey5.append(item)
